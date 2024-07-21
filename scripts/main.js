@@ -1,3 +1,15 @@
+// ==UserScript==
+// @name         HTML 2021 Theme inDev
+// @namespace    http://tampermonkey.net/
+// @version      none
+// @description  none
+// @author       https://vk.com/legionlegionlegionlegionlegion
+// @match        https://*.tankionline.com/*
+// @icon         https://raw.githubusercontent.com/Indifferental/Tanki-Online-HTML-2021-Theme/main/assets/logosmall.webp
+// @grant        none
+// ==/UserScript==
+
+
 (function() {
 
     'use strict'
@@ -325,7 +337,7 @@
         }
 
         .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-            content: 'developed by: https://vk.com/legionlegionlegionlegionlegion';
+            content: '22.07.2024 developed by: https://vk.com/legionlegionlegionlegionlegion';
             color: white;
             font-family: RubikRegular;
             position: absolute;
@@ -755,8 +767,8 @@
         .AnnouncementHomeScreenComponentStyle-headerTimer span:before {
             content: '';
             background-image: url(https://tankionline.com/play/static/images/timer.880064de.webp);
-            width: 20px;
-            height: 20px;
+            width: 1vw;
+            height: 1vw;
             position: absolute;
             left: -1.25em;
             background-repeat: no-repeat;
@@ -2189,7 +2201,6 @@
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .BattleInfoComponentStyle-customOptions,
         .ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon > .ProBattlesComponentStyle-cellName > .Common-flexEndAlignCenter,
         .Common-container > .ProBattlesComponentStyle-navigationBlock > .ProBattlesComponentStyle-section,
-        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn,
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStartColumn,
         .BattleInfoComponentStyle-commonBlockSelectBattle {
             visibility: hidden;
@@ -2664,7 +2675,7 @@
 
                         };
 
-                        let ga = document.querySelector('.Common-flexCenterAlignStart.Common-alignSelfStart.Common-flexStartAlignStart.Common-flexWrapNowrap.Common-scrollBarVisible');
+                        let ga = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
 
                         if (ga) {
 
@@ -2712,7 +2723,7 @@
 
                 };
 
-                let ga = document.querySelector('.Common-flexCenterAlignStart.Common-alignSelfStart.Common-flexStartAlignStart.Common-flexWrapNowrap.Common-scrollBarVisible');
+                let ga = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
 
                 if (ga) {
 
@@ -2733,6 +2744,28 @@
             let Observer = new MutationObserver(function(Inspect) { Inspect.forEach(function(Mutation) { if (Mutation.addedNodes.length && Mutation.type === 'childList') { Mutation.addedNodes.forEach(function(Check) {
 
             if (Check.nodeType === 1) {
+
+                let elem1 = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
+
+                let ga = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
+
+                let gar = document.querySelector('.ProBattlesComponentStyle-navigationBlock');
+
+                let eba = document.querySelector('.BattleInfoComponentStyle-selectBattle');
+
+                if (elem1 && !eba) {
+
+                    let style1 = window.getComputedStyle(elem1, null);
+
+                    if (style1.visibility == 'visible') {
+
+                        ga.forEach((item) => item.style = 'visibility: hidden !important' );
+
+                        gar.style = 'visibility: hidden'
+
+                    };
+
+                };
 
                 let header = document.getElementsByClassName('ProBattlesComponentStyle-mainContainer')[0];
 
