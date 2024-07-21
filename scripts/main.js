@@ -321,7 +321,7 @@
 
         .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter {
             background: rgb(45 49 64 / 75%) !important;
-            border-left: 6px solid rgb(255 188 9);
+            border-left: var(--menu-border-width) solid rgb(255 188 9);
         }
 
         .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
@@ -1148,7 +1148,7 @@
         }
 
         .GarageMainScreenStyle-blockParameters > div > .GarageCommonStyle-animatedBlurredLeftBlock > .TankParametersStyle-parametersBlockGear {
-            border-left: 4px solid rgb(85 89 100) !important;
+            border-left: var(--menu-border-width) solid rgb(85 89 100) !important;
             border-bottom: unset;
             width: 10em;
             height: 1.5em;
@@ -1190,7 +1190,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: 1em;
-            border-left: 4px solid rgb(255 188 9);
+            border-left: var(--menu-border-width) solid rgb(255 188 9);
             top: 9em;
             content: '';
             font-size: 1em;
@@ -1662,7 +1662,7 @@
             background-color: rgb(85 89 100);
             width: 31.45em;
             margin-top: -1.5em;
-            border-left: 4px solid rgb(150 253 99);
+            border-left: var(--menu-border-width) solid rgb(150 253 99);
             height: 2.5em;
         }
 
@@ -1840,14 +1840,14 @@
 
         .BattleTabStatisticComponentStyle-blueTeamTableContainer > table > tbody > .BattleTabStatisticComponentStyle-rowBackGround {
             background: rgb(43 122 188 / 25%);
-            border-left: 5px solid #4ccaffa1;
+            border-left: var(--menu-border-width) solid #4ccaffa1;
 
             transition: var(--menu-transition);
         }
 
         .BattleTabStatisticComponentStyle-redTeamTableContainer > table > tbody > .BattleTabStatisticComponentStyle-rowBackGround {
             background: rgb(207 87 87 / 15%);
-            border-left: 5px solid rgb(225 129 142);
+            border-left: var(--menu-border-width) solid rgb(225 129 142);
 
             transition: var(--menu-transition);
         }
@@ -1862,7 +1862,7 @@
 
         .BattleTabStatisticComponentStyle-selectedRowBackGround {
             background: rgb(0 150 255 / 30%);
-            border-left: 5px solid #4ccaffa1;
+            border-left: var(--menu-border-width) solid #4ccaffa1;
 
             transition: var(--menu-transition);
         }
@@ -2029,7 +2029,7 @@
 
         .Common-container > .ProBattlesComponentStyle-navigationBlock > .ProBattlesComponentStyle-commonBlockHotkeyV {
             background: rgb(95 99 111 / 80%);
-            border-left: 5px solid rgb(179 183 196);
+            border-left: var(--menu-border-width) solid rgb(179 183 196);
             justify-content: center;
             z-index: 16;
             position: absolute;
@@ -2051,7 +2051,7 @@
 
         .Common-container > .ProBattlesComponentStyle-navigationBlock > .ProBattlesComponentStyle-chatBlock {
             background: rgb(95 99 111 / 80%);
-            border-left: 5px solid rgb(179 183 196);
+            border-left: var(--menu-border-width) solid rgb(179 183 196);
             justify-content: center;
             z-index: 16;
             position: absolute;
@@ -2063,7 +2063,7 @@
 
         .ProBattlesComponentStyle-battleCurrentAmount {
             background: rgb(95 99 111 / 80%);
-            border-left: 5px solid rgb(179 183 196);
+            border-left: var(--menu-border-width) solid rgb(179 183 196);
             font-family: 'RubikRegular';
             color: white;
             z-index: 16;
@@ -2169,8 +2169,8 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            width: 24px;
-            height: 24px;
+            width: 1vw;
+            height: 1vw;
             left: 0.85em;
         }
 
@@ -2181,8 +2181,8 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            width: 24px;
-            height: 24px;
+            width: 1vw;
+            height: 1vw;
             right: 0.85em;
         }
 
@@ -2230,7 +2230,7 @@
 
         .ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon {
             background: rgb(95 99 111 / 80%);
-            border-left: 5px solid #bcff77;
+            border-left: var(--menu-border-width) solid #bcff77;
             box-shadow: unset !important;
             border-radius: 0px !important;
             width: 99.69%;
@@ -2812,6 +2812,18 @@
         };
 
         ArrayCheck();
+
+        if (window.screen.width >= 2560) {
+
+            document.body.style = '--menu-border-width: 5px'
+
+        };
+
+        if (window.screen.width < 2560) {
+
+            document.body.style = '--menu-border-width: 0.163em'
+
+        };
 
     };
 
