@@ -1,15 +1,3 @@
-// ==UserScript==
-// @name         HTML 2021 Theme inDev
-// @namespace    http://tampermonkey.net/
-// @version      none
-// @description  none
-// @author       https://vk.com/legionlegionlegionlegionlegion
-// @match        https://*.tankionline.com/*
-// @icon         https://raw.githubusercontent.com/Indifferental/Tanki-Online-HTML-2021-Theme/main/assets/logosmall.webp
-// @grant        none
-// ==/UserScript==
-
-
 (function() {
 
     'use strict'
