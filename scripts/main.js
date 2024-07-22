@@ -339,7 +339,7 @@
         }
 
         .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-            content: 'v1.021 // developed by: https://vk.com/legionlegionlegionlegionlegion';
+            content: 'v1.022 // developed by: https://vk.com/legionlegionlegionlegionlegion';
             color: white;
             font-family: RubikRegular;
             position: absolute;
@@ -1964,12 +1964,11 @@
         }
 
         .BattleTabStatisticComponentStyle-container > div > .Common-flexCenterAlignCenter:before {
-            content: '\\ by Katana \\';
+            content: 'by Katana';
             position: absolute;
             visibility: visible;
-            color: rgb(255 255 255 / 20%);
-            left: 1em;
-            bottom: 0.4em;
+            color: rgb(255 255 255 / 12.5%);
+            bottom: 0.3em;
         }
 
         .BattleTabStatisticComponentStyle-header {
@@ -2081,8 +2080,7 @@
             z-index: 16;
             width: 3em;
             height: 3em;
-            top: 7.5em;
-            bottom: 0em;
+            bottom: 1.55em;
             left: unset;
             right: 1em;
         }
@@ -2671,6 +2669,16 @@
             left: unset;
         }
 
+        .Common-container > .QuestsComponentStyle-content {
+            position: absolute;
+            top: 6em;
+            height: 55.45em;
+        }
+
+        .SuperMissionComponentStyle-descriptionSuperMission {
+            height: 100%;
+        }
+
         `
 
         var tankResistances = [{
@@ -3002,10 +3010,6 @@
                         console.log('found in', Check.toLocaleString());
 
                     };
-
-                } else {
-
-                    console.log('not found in', Check.toLocaleString());
 
                 };
 
