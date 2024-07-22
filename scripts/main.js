@@ -154,7 +154,7 @@
 
                 const MainComponent = document.createElement('div');
                       MainComponent.className = 'LobbyLoaderComponentStyle-closingList_1'
-                      MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 300ms linear forwards'
+                      MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 110ms linear forwards'
 
                 document.body.appendChild(MainComponent);
 
@@ -166,7 +166,7 @@
 
                 setTimeout(function() {
 
-                      SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332; animation: disappear 300ms linear forwards'
+                      SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332; animation: disappear 110ms linear forwards'
 
                 }, 200);
 
@@ -191,7 +191,7 @@
 
                 const MainComponent = document.createElement('div');
                       MainComponent.className = 'LobbyLoaderComponentStyle-closingList_1'
-                      MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 300ms linear forwards'
+                      MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 110ms linear forwards'
 
                 document.body.appendChild(MainComponent);
 
@@ -203,7 +203,7 @@
 
                 setTimeout(function() {
 
-                      SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332; animation: disappear 300ms linear forwards'
+                      SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332; animation: disappear 110ms linear forwards'
 
                 }, 200);
 
@@ -305,6 +305,20 @@
             position: absolute;
         }
 
+        .ApplicationAnimation-header:before {
+            content: '';
+            background: linear-gradient(90deg, rgb(64 67 74 / 20%), rgb(95 99 111 / 20%), rgb(64 67 74 / 20%));
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 -4px 0.5em 0 rgb(23 74 108 / 25%);
+            z-index: 14;
+            position: fixed;
+            bottom: 0em;
+            left: 0em;
+            width: 100%;
+            height: 2.035em;
+        }
+
         .ApplicationAnimation-header:after {
             content: '';
             animation: progress_bar 0.6s linear infinite;
@@ -312,11 +326,11 @@
 
             background-image: linear-gradient(-45deg, #D1464A 25%, transparent 25%, transparent 50%, #D1464A 50%, #D1464A 75%, transparent 75%, transparent);
             background-size: 40px 40px;
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: fixed;
+            bottom: 0em;
+            left: 0em;
             width: 100%;
-            height: 100%;
+            height: 2em;
         }
 
         .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter {
@@ -325,7 +339,7 @@
         }
 
         .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-            content: '22.07.2024 developed by: https://vk.com/legionlegionlegionlegionlegion';
+            content: 'v1.021 // developed by: https://vk.com/legionlegionlegionlegionlegion';
             color: white;
             font-family: RubikRegular;
             position: absolute;
@@ -508,7 +522,7 @@
             position: absolute;
             left: 23em;
             width: 14rem;
-            height: 5rem;
+            transition: background 110ms ease-in-out;
         }
 
         .UserInfoContainerStyle-userTitleContainer > .Common-flexCenterAlignCenter:before {
@@ -589,6 +603,16 @@
             margin-right: 1em;
             width: fit-content;
             min-width: unset;
+            transition: 110ms ease-in-out;
+        }
+
+        .UserScoreComponentStyle-blockRightPanel > div > .HeaderCommonStyle-icons:hover,
+        .BreadcrumbsComponentStyle-rightButtonsContainer > div > .HeaderCommonStyle-icons:hover,
+        .UserScoreComponentStyle-blockRightPanel > .Common-flexCenterAlignCenter:hover,
+        .UserScoreComponentStyle-blockRightPanel > .BreadcrumbsComponentStyle-logout:hover,
+        .BreadcrumbsComponentStyle-rightButtonsContainer > .Common-flexCenterAlignCenter:hover,
+        .BreadcrumbsComponentStyle-rightButtonsContainer > .BreadcrumbsComponentStyle-exitGameButton:hover {
+            background: rgb(255 255 255 / 20%);
         }
 
         .UserScoreComponentStyle-blockRightPanel > div > .HeaderCommonStyle-icons > span,
@@ -618,12 +642,15 @@
             border: unset;
             border-radius: 0.4em;
             margin-right: 1em;
+            transition: 110ms ease-in-out;
         }
 
 
-        .ContextMenuStyle-menu {
+        .ContextMenuStyle-menu,
+        .TooltipStyle-tooltip {
             background: radial-gradient(70% 100% at 50% 50%, #56586A 0%, #343940 100%);
             backdrop-filter: unset;
+            box-shadow: unset;
         }
 
         .ContextMenuStyle-menuItemRank {
@@ -646,21 +673,33 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-
+        .TooltipStyle-tooltip:before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-image: var(--right-lines);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+            opacity: 0.25;
+        }
 
         .BattlePassLobbyComponentStyle-menuBattlePass {
             background: rgb(45 49 64);
-            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 50%);
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 50%) !important;
             border-radius: 0px;
             right: 0em;
             margin-top: 10em;
+            transition: background 110ms ease-in-out;
         }
 
         .BattlePassLobbyComponentStyle-descriptionMenuPass {
             background: rgb(66 69 88);
+            border-left: 3px solid rgb(255 188 9);
             margin-bottom: 0.75em;
             height: 1.75em;
-            border-left: 3px solid rgb(255 188 9);
+            transition: background 110ms ease-in-out;
         }
 
         .BattlePassLobbyComponentStyle-descriptionMenuPass:before,
@@ -687,22 +726,34 @@
 
         .EventBattlePassLobbyComponentStyle-buttonEventBattlePass {
             background: rgb(45 49 64);
-            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 50%);
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 50%) !important;
             border-radius: 0px;
-            margin-top: 10em;
             top: unset;
             right: 24em;
+            margin-top: 10em;
+            transition: background 110ms ease-in-out;
+        }
+
+        .EventBattlePassLobbyComponentStyle-buttonEventBattlePass:hover,
+        .BattlePassLobbyComponentStyle-menuBattlePass:hover {
+            background: rgb(56 60 79);
         }
 
         .EventBattlePassLobbyComponentStyle-buttonEventBattlePass > .Common-flexCenterAlignCenterColumn {
+            background: rgb(66 69 88);
+            border-left: 3px solid rgb(255 188 9);
             position: absolute;
             top: 0em;
             left: unset;
-            width: 9.2em;
-            background: rgb(66 69 88);
             margin-bottom: 0.75em;
+            width: 9.2em;
             height: 1.75em;
-            border-left: 3px solid rgb(255 188 9);
+            transition: background 110ms ease-in-out;
+        }
+
+        .EventBattlePassLobbyComponentStyle-buttonEventBattlePass:hover > .Common-flexCenterAlignCenterColumn,
+        .BattlePassLobbyComponentStyle-menuBattlePass:hover > .BattlePassLobbyComponentStyle-descriptionMenuPass {
+            background: rgb(87 91 112);
         }
 
         .EventBattlePassLobbyComponentStyle-commonBlockProgressBar,
@@ -805,6 +856,11 @@
             background: rgb(255 255 255 / 10%);
             box-shadow: rgba(255, 255, 255, 0.15) 1px 0em 0em 0em;
             width: 4.5em;
+            transition: background 110ms ease-in-out;
+        }
+
+        .BreadcrumbsComponentStyle-backButton:hover {
+            background: rgb(255 255 255 / 20%);
         }
 
         .BreadcrumbsComponentStyle-backButton > .IconStyle-iconBackArrow {
@@ -929,6 +985,11 @@
             margin: unset;
             justify-content: center;
             opacity: 0.9;
+            transition: background 110ms ease-in-out;
+        }
+
+        .PrimaryMenuItemComponentStyle-menuItemContainer:nth-child(5):hover {
+            background-color: rgb(255 255 255 / 2.5%);
         }
 
         .PrimaryMenuItemComponentStyle-menuItemContainer:nth-child(5) > div,
@@ -944,6 +1005,11 @@
         .FooterComponentStyle-footer li {
             width: 6em;
             height: 4em;
+            transition: background 110ms ease-in-out;
+        }
+
+        .FooterComponentStyle-containerMenu:hover {
+            background: rgb(255 255 255 / 2.5%);
         }
 
         .FooterComponentStyle-footer ul {
@@ -1613,7 +1679,7 @@
             background: transparent;
             box-shadow: unset;
             border-radius: 0px !important;
-            transition: all 200ms ease-out;
+            transition: all 110ms ease-out;
         }
 
         .BattlePickComponentStyle-commonStyleBlock:hover,
@@ -1842,14 +1908,14 @@
             background: rgb(43 122 188 / 25%);
             border-left: var(--menu-border-width) solid #4ccaffa1;
 
-            transition: var(--menu-transition);
+            transition: background 110ms ease-in-out;
         }
 
         .BattleTabStatisticComponentStyle-redTeamTableContainer > table > tbody > .BattleTabStatisticComponentStyle-rowBackGround {
             background: rgb(207 87 87 / 15%);
             border-left: var(--menu-border-width) solid rgb(225 129 142);
 
-            transition: var(--menu-transition);
+            transition: background 110ms ease-in-out;
         }
 
         .BattleTabStatisticComponentStyle-blueTeamTableContainer > table > tbody > .BattleTabStatisticComponentStyle-rowBackGround:hover {
@@ -1864,7 +1930,7 @@
             background: rgb(0 150 255 / 30%);
             border-left: var(--menu-border-width) solid #4ccaffa1;
 
-            transition: var(--menu-transition);
+            transition: background 110ms ease-in-out;
         }
 
         .BattleTabStatisticComponentStyle-selectedRowBackGround:hover {
@@ -1893,8 +1959,17 @@
         }
 
         .BattleTabStatisticComponentStyle-container > div > .Common-flexCenterAlignCenter {
-            height: 0.2em;
+            height: 1em;
             visibility: hidden;
+        }
+
+        .BattleTabStatisticComponentStyle-container > div > .Common-flexCenterAlignCenter:before {
+            content: '\\ by Katana \\';
+            position: absolute;
+            visibility: visible;
+            color: rgb(255 255 255 / 20%);
+            left: 1em;
+            bottom: 0.4em;
         }
 
         .BattleTabStatisticComponentStyle-header {
@@ -1915,7 +1990,6 @@
             background-repeat: no-repeat;
             background-position: left;
             background-size: contain;
-            filter: hue-rotate(315deg);
             transform: unset;
         }
 
@@ -1928,7 +2002,6 @@
             background-repeat: no-repeat;
             background-position: right;
             background-size: contain;
-            filter: hue-rotate(315deg);
             transform: unset;
         }
 
@@ -2037,6 +2110,12 @@
             left: 18.75em;
             width: 7em;
             height: 2.75em;
+            transition: background 110ms ease-in-out;
+        }
+
+        .Common-container > .ProBattlesComponentStyle-navigationBlock > .ProBattlesComponentStyle-commonBlockHotkeyV:hover {
+            background: rgb(107 111 125);
+            cursor: pointer;
         }
 
         .Common-flexStartAlignStart > .GarageMenuComponentStyle-garageMenuContainer {
@@ -2059,6 +2138,12 @@
             bottom: 0em;
             width: 7em;
             height: 2.75em;
+            transition: background 110ms ease-in-out;
+        }
+
+        .Common-container > .ProBattlesComponentStyle-navigationBlock > .ProBattlesComponentStyle-chatBlock:hover {
+            background: rgb(107 111 125);
+            cursor: pointer;
         }
 
         .ProBattlesComponentStyle-battleCurrentAmount {
@@ -2072,7 +2157,7 @@
             align-items: center;
             justify-content: flex-start;
             bottom: 0em;
-            left: 33.8em;
+            left: 41.2em;
             width: 26.5em;
             height: 2.75em;
             padding-left: 0.75em;
@@ -2150,6 +2235,7 @@
             width: 50%;
             height: 100%;
             margin: unset;
+            transition: background 110ms ease-in-out;
         }
 
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .BattleInfoComponentStyle-invite > .Common-flexStartAlignCenter:nth-child(1) {
@@ -2161,6 +2247,12 @@
             justify-content: flex-end;
             align-items: center;
         }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .BattleInfoComponentStyle-invite > .Common-flexStartAlignCenter:nth-child(1):hover,
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .BattleInfoComponentStyle-invite > .Common-flexStartAlignCenter:nth-child(2):hover {
+            background: rgb(107 111 125);
+        }
+
 
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .BattleInfoComponentStyle-invite > .Common-flexStartAlignCenter:nth-child(1):before {
             content: '';
@@ -2213,13 +2305,17 @@
             border-radius: 0.15em;
         }
 
+        .Common-flexCenterAlignCenter.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin:hover {
+            background: #a7e457;
+        }
+
         .Common-flexCenterAlignCenter.ButtonComponentStyle-disabled.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin {
             background: rgba(255, 255, 255, 0.1) !important;
         }
 
         .ProBattlesComponentStyle-battlesContainer {
             margin-left: unset;
-            margin-top: 6em;
+            margin-top: 8.75em;
             height: calc(100% - 14.625em);
         }
 
@@ -2237,6 +2333,12 @@
             margin-top: unset;
             margin-bottom: 0.3em;
             margin-left: unset;
+            transition: background 110ms ease-in-out;
+        }
+
+        .ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon:hover {
+            background: rgb(107 111 125);
+            cursor: pointer;
         }
 
         .ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .Common-flexStartAlignCenter > tr {
@@ -2246,12 +2348,19 @@
 
         .ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .Common-flexStartAlignCenter > tr > th {
             background: rgb(95 99 111 / 80%);
+            border-left: var(--menu-border-width) solid rgb(179 183 196);
             height: 2.25em;
             justify-content: space-between;
+            transition: background 110ms ease-in-out;
+        }
+
+        .ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .Common-flexStartAlignCenter > tr > th:hover {
+            background: rgb(107 111 125);
+            cursor: pointer;
         }
 
         .ProBattlesComponentStyle-cellName {
-            width: 50.65%;
+            width: 49.65%;
             min-width: unset;
             max-width: unset;
         }
@@ -2291,6 +2400,26 @@
             margin-left: -4.05em;
             width: 3.5em;
             height: 43em;
+            transition: background 110ms ease-in-out;
+        }
+
+        .BattleCardComponentStyle-line:hover {
+            background: rgb(107 111 125);
+            cursor: pointer;
+        }
+
+        .BattleCardComponentStyle-line:before {
+            content: 'BACK';
+            color: white;
+            text-shadow: 0 0 8px rgb(0 0 0 / 75%);
+            font-size: 1.5em;
+            font-family: 'RubikRegular';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            rotate: -90deg;
         }
 
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .SettingsComponentStyle-scrollCreateBattle {
@@ -2308,13 +2437,18 @@
         }
 
         .Common-flexStartAlignStartColumn > .UsersTableStyle-row {
-            width: auto;
+            width: calc(100% - 0.5em);
+            border-radius: 0px;
         }
 
         .Common-flexStartAlignStartColumn > .UsersTableStyle-row > .UsersTableStyle-centerCell {
             width: 17.35em !important;
             margin-top: 0.1em;
             border-radius: 0px;
+        }
+
+        .Common-flexStartAlignStartColumn > .UsersTableStyle-row > .UsersTableStyle-centerCell > .UsersTableStyle-commonContainer > div > div > .Common-flexStartAlignCenter {
+            max-width: 11.625em;
         }
 
         .UsersTableStyle-rowBattleEmpty > .UsersTableStyle-emptyRow {
@@ -2471,6 +2605,70 @@
             justify-content: center;
             align-items: center;
             margin: unset;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn:nth-child(1) {
+            width: calc(100% - 37.5em);
+            pointer-events: none;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn:nth-child(1) > .Common-flexStartAlignStartColumn > .ProBattlesComponentStyle-createBattleButton {
+            background: #87B748;
+            border-radius: 0.15em;
+            visibility: visible;
+            pointer-events: all;
+            bottom: 3em;
+            right: 0em;
+            left: unset;
+            width: 12em;
+            height: 3em;
+            transition: background 110ms ease-in-out;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn:nth-child(1) > .Common-flexStartAlignStartColumn > .ProBattlesComponentStyle-createBattleButton:hover {
+            background: #a7e457;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn:nth-child(1) > .Common-flexStartAlignStartColumn > .ProBattlesComponentStyle-createBattleButton:before {
+            content: 'CREATE [ C ]';
+            color: white;
+            text-shadow: 0 0 8px rgb(0 0 0 / 75%);
+            font-family: 'RubikMedium';
+            position: absolute;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn:nth-child(1) > .Common-flexStartAlignStartColumn > .ProBattlesComponentStyle-createBattleButton > div,
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn:nth-child(1) > .Common-flexStartAlignStartColumn > .ProBattlesComponentStyle-createBattleButton > h3 {
+            visibility: hidden;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1) {
+            background: rgb(95 99 111 / 80%);
+            border-left: var(--menu-border-width) solid rgb(179 183 196);
+            border-radius: 0px;
+            visibility: visible;
+            pointer-events: all;
+            z-index: 155;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 9.25em;
+            left: 33.75em;
+            margin: unset;
+            height: 2.75em;
+            width: 7em;
+            z-index: 16;
+            transition: background 110ms ease-in-out;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1):hover {
+            background: rgb(107 111 125);
+            cursor: pointer;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1) > div {
+            left: unset;
         }
 
         `
@@ -2637,57 +2835,69 @@
             LobbyLoader();
             LobbyClosing();
 
-            console.log(`<> HTML 2021 Theme launched successfully.\n`, document);
+            console.log(`> HTML 2021 Theme launched successfully.\n`, document);
 
         } else {
 
-            console.log(`<> HTML 2021 Theme is not available.`);
+            console.log(`> HTML 2021 Theme is not available.`);
 
         };
 
         function BattlesArray() {
 
-            let da = document.querySelectorAll('.ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon');
+            let battles = document.querySelectorAll('.ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon');
 
-            if (da) {
+            if (battles) {
 
                 var clickEvent = () => {
 
-                    setTimeout(function() {
+                    let battleMenu = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
 
-                        let as = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
+                    if (battleMenu) {
 
-                        if (as) {
+                        battleMenu.forEach((item) => item.style = 'visibility: visible' );
 
-                            as.forEach((item) => item.style = 'visibility: visible' );
+                    };
 
-                        };
+                    let tableRows = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
 
-                        let ga = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
+                    if (tableRows) {
 
-                        if (ga) {
+                        tableRows.style = 'visibility: hidden'
 
-                            ga.style = 'visibility: hidden'
+                    };
 
-                        };
+                    let createBattle = document.querySelector('.ProBattlesComponentStyle-createBattleButton');
 
-                        let har = document.querySelector('.Common-container > .ProBattlesComponentStyle-navigationBlock');
+                    if (createBattle) {
 
-                        if (har) {
+                        createBattle.style = 'visibility: hidden'
 
-                            har.style = 'visibility: hidden'
+                    };
 
-                        };
+                    let navBlock = document.querySelector('.Common-container > .ProBattlesComponentStyle-navigationBlock');
 
-                    }, 10);
+                    if (navBlock) {
+
+                        navBlock.style = 'visibility: hidden'
+
+                    };
+
+                    let filterButton = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1)');
+
+                    if (filterButton) {
+
+                        filterButton.style = 'visibility: hidden'
+
+                    };
 
                 };
 
-                da.forEach((item) => item.addEventListener('click', clickEvent));
+                battles.forEach((item) => item.addEventListener('click', clickEvent));
 
             } else {
 
-                da.forEach((item) => item.removeEventListener('click', clickEvent));
+                battles.forEach((item) => item.removeEventListener('click', clickEvent));
 
             };
 
@@ -2697,33 +2907,47 @@
 
             var count = 0
 
-            var flash = false
-
             var returnEvent = () => {
 
-                console.log('found');
+                console.log('return Event');
 
-                let as = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
+                let battleMenu = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
 
-                if (as) {
+                if (battleMenu) {
 
-                    as.forEach((item) => item.style = 'visibility: hidden' );
-
-                };
-
-                let ga = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
-
-                if (ga) {
-
-                    ga.style = 'visibility: visible'
+                    battleMenu.forEach((item) => item.style = 'visibility: hidden' );
 
                 };
 
-                let har = document.querySelector('.Common-container > .ProBattlesComponentStyle-navigationBlock');
+                let tableRows = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
 
-                if (har) {
+                if (tableRows) {
 
-                    har.style = 'visibility: visible'
+                    tableRows.style = 'visibility: visible'
+
+                };
+
+                let createBattle = document.querySelector('.ProBattlesComponentStyle-createBattleButton');
+
+                if (createBattle) {
+
+                    createBattle.style = 'visibility: visible'
+
+                };
+
+                let navBlock = document.querySelector('.Common-container > .ProBattlesComponentStyle-navigationBlock');
+
+                if (navBlock) {
+
+                    navBlock.style = 'visibility: visible'
+
+                };
+
+                let filterButton = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1)');
+
+                if (filterButton) {
+
+                    filterButton.style = 'visibility: visible'
 
                 };
 
@@ -2733,23 +2957,31 @@
 
             if (Check.nodeType === 1) {
 
-                let elem1 = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
+                let battleMenu = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
 
-                let ga = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
+                let selectBattle = document.querySelector('.BattleInfoComponentStyle-selectBattle');
 
-                let gar = document.querySelector('.ProBattlesComponentStyle-navigationBlock');
+                let tableRows = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
 
-                let eba = document.querySelector('.BattleInfoComponentStyle-selectBattle');
+                let createBattle = document.querySelector('.ProBattlesComponentStyle-createBattleButton');
 
-                if (elem1 && !eba) {
+                let navBlock = document.querySelector('.ProBattlesComponentStyle-navigationBlock');
 
-                    let style1 = window.getComputedStyle(elem1, null);
+                let filterButton = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1)');
 
-                    if (style1.visibility == 'visible') {
+                if (battleMenu && !selectBattle) {
 
-                        ga.forEach((item) => item.style = 'visibility: hidden !important' );
+                    let style = window.getComputedStyle(battleMenu, null);
 
-                        gar.style = 'visibility: hidden'
+                    if (style.visibility == 'visible') {
+
+                        tableRows.forEach((item) => item.style = 'visibility: hidden !important' );
+
+                        createBattle.style = 'visibility: hidden'
+
+                        navBlock.style = 'visibility: hidden'
+
+                        filterButton.style = 'visibility: hidden'
 
                     };
 
@@ -2757,21 +2989,23 @@
 
                 let header = document.getElementsByClassName('ProBattlesComponentStyle-mainContainer')[0];
 
-                let da = document.getElementsByClassName('BattleCardComponentStyle-line')[0];
+                let returnButton = document.getElementsByClassName('BattleCardComponentStyle-line')[0];
 
                 if (header) {
 
-                    let da = document.getElementsByClassName('BattleCardComponentStyle-line')[0];
+                    let returnButton = document.getElementsByClassName('BattleCardComponentStyle-line')[0];
 
-                    if (da) {
+                    if (returnButton) {
 
-                        da.addEventListener('click', returnEvent);
+                        returnButton.addEventListener('click', returnEvent);
+
+                        console.log('found in', Check.toLocaleString());
 
                     };
 
                 } else {
 
-                    console.log('not found');
+                    console.log('not found in', Check.toLocaleString());
 
                 };
 
@@ -2842,7 +3076,7 @@
 
         if (window.screen.width < 2560) {
 
-            document.body.style = '--menu-border-width: 0.163em'
+            document.body.style = '--menu-border-width: 0.263em'
 
         };
 
