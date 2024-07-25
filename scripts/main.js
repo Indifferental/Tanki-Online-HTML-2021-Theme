@@ -342,7 +342,7 @@
         }
 
         .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-            content: 'v1.023 // developed by: https://vk.com/legionlegionlegionlegionlegion';
+            content: 'v1.03 // if you find a bug, write: https://vk.com/legionlegionlegionlegionlegion';
             color: white;
             font-family: RubikRegular;
             position: absolute;
@@ -411,9 +411,44 @@
 
         .Common-container,
         .ChatComponentStyle-chatWindow,
+        .NewsComponentStyle-newsWindow,
         .SaleByKitStyle-commonBlockModal,
         .ClanCreateComponentStyle-blockCreatureClan {
             background: radial-gradient(70% 100% at 50% 50%, #56586A 0%, #212428 100%);
+        }
+
+        .DialogContainerComponentStyle-container {
+            background: rgb(85 89 100);
+            outline: unset;
+        }
+
+        .DialogContainerComponentStyle-header {
+            background: rgb(107 111 125 / 50%);
+            padding: 0.5em 2em 0.5em 2em;
+            left: -2em;
+            bottom: 1em;
+        }
+
+        .DialogContainerComponentStyle-header:before {
+            content: '';
+            background-image: var(--right-lines);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 0em;
+            width: 12em;
+            height: 100%;
+        }
+
+        .DialogContainerComponentStyle-header:after {
+            content: '';
+            background: rgb(150 253 99 / 80%);
+            box-shadow: 0em 0em 1em 0em rgb(150 253 99 / 80%);
+            position: absolute;
+            left: 0em;
+            width: var(--menu-border-width);
+            height: 100%;
         }
 
         .StartScreenComponentStyle-mainContainer {
@@ -491,7 +526,8 @@
             z-index: 15;
         }
 
-        .HotKey-commonBlockForHotKey {
+        .HotKey-commonBlockForHotKey,
+        .BattlePauseMenuComponentStyle-hotKey {
             visibility: hidden;
         }
 
@@ -1620,10 +1656,6 @@
             position: absolute;
         }
 
-        .SquarePriceButtonComponentStyle-commonBlockButton {
-            border-radius: 0.175em !important;
-        }
-
         .GarageCommonStyle-bigActionButton {
             background-image: linear-gradient(45deg, rgb(81 84 92 / 40%), rgb(81 84 92 / 40%)) !important;
             box-shadow: unset !important;
@@ -1760,22 +1792,24 @@
             padding-right: 2em;
         }
 
-        .SuccessfulPurchaseComponentStyle-content > .Common-flexCenterAlignCenter {
-            background-color: #54545F;
-            box-shadow: unset;
-            border-radius: 0.2em;
-        }
-        .BasePaymentComponentStyle-buttonContainer > .Common-flexCenterAlignCenter {
-            background-color: rgb(150 253 99 / 80%);
-            box-shadow: unset;
-            border-radius: 0.2em;
+        .SuccessfulPurchaseComponentStyle-content > .Common-flexCenterAlignCenter,
+        .DialogContainerComponentStyle-keyButton,
+        .InvitationWindowsComponentStyle-backButton,
+        .SquarePriceButtonComponentStyle-commonBlockButton {
+            background-color: #686876 !important;
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%) !important;
+            border-radius: 0.15em !important;
         }
 
         .SuccessfulPurchaseComponentStyle-content > .Common-flexCenterAlignCenter > span,
         .BasePaymentComponentStyle-buttonContainer > .Common-flexCenterAlignCenter > span,
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .Common-flexStartAlignCenter > .Common-flexCenterAlignCenter > span,
+        .DialogContainerComponentStyle-enterButton > span,
+        .DialogContainerComponentStyle-keyButton > span,
+        .InvitationWindowsComponentStyle-backButton > span,
         .Common-flexCenterAlignCenter.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin span {
-            color: white;
-            text-shadow: 0 0 12px rgb(0 0 0 / 75%);
+            color: white !important;
+            text-shadow: 0 0 12px rgb(0 0 0 / 50%);
             margin: unset;
         }
 
@@ -1872,12 +1906,28 @@
             width: 54.25em
         }
 
+        .BattleTabStatisticComponentStyle-dmTableContainer table {
+            padding-left: unset;
+        }
+
+        .BattleTabStatisticComponentStyle-dmTableContainer table tbody tr {
+            border-radius: 0px;
+        }
+
         .BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:first-child {
-            margin-right: 10em
+            margin-right: 10em;
         }
 
         .BattleTabStatisticComponentStyle-dmTableContainer table thead tr th:nth-child(n+1) {
             visibility: hidden
+        }
+
+        .BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:nth-child(n+6) {
+            border: unset;
+        }
+
+        .BattleTabStatisticComponentStyle-dmTableContainer table tbody tr {
+            border-left: var(--menu-border-width) solid rgb(225 129 142);
         }
 
         .BattleTabStatisticComponentStyle-containerInsideResults,
@@ -1932,7 +1982,7 @@
         .BattleTabStatisticComponentStyle-selectedRowBackGround {
             background: rgb(0 150 255 / 30%);
             box-shadow: unset !important;
-            border-left: var(--menu-border-width) solid #4ccaffa1;
+            border-left: var(--menu-border-width) solid #4ccaffa1 !important;
 
             transition: background 110ms ease-in-out;
         }
@@ -2239,6 +2289,10 @@
             height: 6em;
         }
 
+        .Common-flexStartAlignStart > .GarageMenuComponentStyle-garageMenuContainer > .Common-flexCenterAlignCenter {
+            margin: unset;
+        }
+
         .Common-container > .ProBattlesComponentStyle-navigationBlock > .ProBattlesComponentStyle-chatBlock {
             background: rgb(95 99 111 / 80%);
             border-left: var(--menu-border-width) solid rgb(179 183 196);
@@ -2323,6 +2377,7 @@
 
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .BattleInfoComponentStyle-invite {
             background: rgb(95 99 111 / 80%);
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%) !important;
             border: unset;
             position: fixed;
             top: 35em;
@@ -2398,8 +2453,9 @@
         }
 
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .ProBattleCommonStyleMobile-buttonContainer {
-            position: fixed;
-            top: 49em;
+            position: fixed !important;
+            top: 49em !important;
+            left: unset !important;
             margin-left: 16.25em;
             width: 35.58em;
             height: 3em;
@@ -2407,17 +2463,39 @@
         }
 
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .ProBattleCommonStyleMobile-buttonContainer > div {
-            width: 49%;
-        }
-
-        .Common-flexCenterAlignCenter.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin {
-            background: #87B748;
+            width: 49% !important;
+            background: unset !important;
             box-shadow: unset !important;
-            border-radius: 0.15em;
+            border-radius: 0px !important;
         }
 
-        .Common-flexCenterAlignCenter.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin:hover {
-            background: #a7e457;
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .Common-flexStartAlignCenter {
+            position: absolute;
+            top: 41.65em;
+            left: 16.3em;
+            width: 35.4em;
+        }
+
+        .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .Common-flexStartAlignStretchColumn > .Common-flexStartAlignCenter > .Common-flexCenterAlignCenter {
+            background: #87B748;
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%);
+            border-radius: 0.15em;
+            width: inherit;
+            height: 3em;
+        }
+
+        .Common-flexCenterAlignCenter.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin,
+        .BasePaymentComponentStyle-buttonContainer > .Common-flexCenterAlignCenter,
+        .DialogContainerComponentStyle-enterButton {
+            background: #87B748 !important;
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%) !important;
+            border-radius: 0.15em !important;
+        }
+
+        .Common-flexCenterAlignCenter.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin:hover,
+        .BasePaymentComponentStyle-buttonContainer > .Common-flexCenterAlignCenter:hover,
+        .DialogContainerComponentStyle-enterButton:hover {
+            background: #a7e457 !important;
         }
 
         .Common-flexCenterAlignCenter.ButtonComponentStyle-disabled.JoinToBattleComponentStyle-newButtonJoinA.JoinToBattleComponentStyle-buttonJoin {
@@ -2506,6 +2584,7 @@
 
         .BattleCardComponentStyle-line {
             background: rgb(95 99 111 / 80%);
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%) !important;
             position: fixed;
             top: 6.75em;
             margin-left: -4.05em;
@@ -2522,9 +2601,9 @@
         .BattleCardComponentStyle-line:before {
             content: 'BACK';
             color: white;
-            text-shadow: 0 0 8px rgb(0 0 0 / 75%);
             font-size: 1.5em;
             font-family: 'RubikRegular';
+            pointer-events: none;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -2584,6 +2663,7 @@
         }
 
         .BattleInfoComponentStyle-blockCard {
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%) !important;
             position: fixed;
             margin-right: 36.75em;
             top: 10.35em;
@@ -2593,11 +2673,12 @@
 
         .BattleInfoComponentStyle-blockCard:before {
             content: '';
-            width: 100%;
-            position: absolute;
-            height: 14em;
             background: rgb(95 99 111 / 80%);
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%) !important;
+            position: absolute;
             top: 25.85em;
+            width: 100%;
+            height: 14em;
         }
 
         .BattleCardComponentStyle-crystalFund {
@@ -2641,14 +2722,15 @@
         }
 
         .BattleInfoComponentStyle-blockCard > .Common-backgroundImageCover > .Common-flexSpaceBetweenAlignStretch > .Common-flexStartAlignStretch:nth-child(1) {
-            position: fixed;
-            top: 9.25em;
-            margin-left: -0.5em;
-            width: 72.4em;
             background: rgb(95 99 111 / 80%);
+            box-shadow: 0 0 1.5em 0 rgb(0 0 0 / 15%) !important;
+            position: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
+            top: 9.25em;
+            margin-left: -0.5em;
+            width: 72.4em;
         }
 
         .BattleCardComponentStyle-mapName {
@@ -2756,6 +2838,7 @@
         .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1) {
             background: rgb(95 99 111 / 80%);
             border-left: var(--menu-border-width) solid rgb(179 183 196);
+            box-shadow: unset !important;
             border-radius: 0px;
             visibility: visible;
             pointer-events: all;
@@ -2789,7 +2872,246 @@
         }
 
         .SuperMissionComponentStyle-descriptionSuperMission {
+            background: transparent;
+            border: unset;
             height: 100%;
+        }
+
+        .SuperMissionComponentStyle-gradientBackground,
+        .TableMainQuestComponentStyle-cardRewardGivenTable {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .TableMainQuestComponentStyle-cardLockedTable,
+        .MainQuestComponentStyle-cardCommonLocked {
+            background: rgb(85 89 100 / 75%);
+            border-left: var(--menu-border-width) solid rgb(255 90 90);
+            box-shadow: unset !important;
+            height: 8em;
+            border-radius: 0px;
+            padding-top: unset;
+            padding-bottom: unset;
+            transition: background 110ms ease-in-out;
+        }
+
+        .TableMainQuestComponentStyle-cardLockedTable:hover,
+        .MainQuestComponentStyle-cardCommonLocked:hover {
+            background: rgb(92 96 108);
+        }
+
+        .MainQuestComponentStyle-cardPlayCommon,
+        .MainQuestComponentStyle-cardPlay {
+            background: rgb(85 89 100 / 75%);
+            border-left: var(--menu-border-width) solid rgb(191 213 255);
+            box-shadow: unset !important;
+            height: 8em;
+            border-radius: 0px;
+            padding-top: unset;
+            padding-bottom: unset;
+            transition: background 110ms ease-in-out;
+        }
+
+        .MainQuestComponentStyle-cardPlayCommon:hover,
+        .MainQuestComponentStyle-cardPlay:hover {
+            background: rgb(92 96 108);
+        }
+
+        .TableMainQuestComponentStyle-cardRewardCompletedTable {
+            background: rgb(118 255 51 / 25%);
+            border-left: var(--menu-border-width) solid rgb(118 255 51 / 75%);
+            box-shadow: unset !important;
+            height: 8em;
+            border-radius: 0px;
+            padding-top: unset;
+            padding-bottom: unset;
+            transition: background 110ms ease-in-out;
+        }
+
+        .TableMainQuestComponentStyle-cardRewardCompletedTable:hover {
+            background: rgb(118 255 51 / 35%);
+        }
+
+        .TableMainQuestComponentStyle-cardLockedTable > .Common-flexEndAlignStartColumn,
+        .MainQuestComponentStyle-cardCommonLocked > .Common-flexEndAlignStartColumn,
+        .MainQuestComponentStyle-cardPlayCommon > .Common-flexEndAlignStartColumn,
+        .TableMainQuestComponentStyle-cardRewardCompletedTable > .Common-flexEndAlignStartColumn {
+            height: inherit;
+            justify-content: center;
+        }
+
+        .MainQuestComponentStyle-cardPlayCommon > .Common-flexEndAlignStartColumn:before {
+            content: '';
+            height: inherit;
+            position: absolute;
+            background-image: var(--menu-left-lines);
+            width: 36em;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.15;
+        }
+
+        .TableMainQuestComponentStyle-cardLockedTable > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd,
+        .MainQuestComponentStyle-cardCommonLocked > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd,
+        .MainQuestComponentStyle-cardPlayCommon > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd,
+        .TableMainQuestComponentStyle-cardRewardCompletedTable > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd {
+            justify-content: flex-start;
+        }
+
+        .TableMainQuestComponentStyle-cardLockedTable > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > span,
+        .MainQuestComponentStyle-cardCommonLocked > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > span,
+        .MainQuestComponentStyle-cardPlayCommon > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > span,
+        .TableMainQuestComponentStyle-cardRewardCompletedTable > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > span {
+            color: white;
+        }
+
+        .TableMainQuestComponentStyle-cardLockedTable > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > h4,
+        .MainQuestComponentStyle-cardCommonLocked > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > h4,
+        .MainQuestComponentStyle-cardPlayCommon > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > h4,
+        .TableMainQuestComponentStyle-cardRewardCompletedTable > .Common-flexEndAlignStartColumn > .MainQuestComponentStyle-commonDescriptionProgress > .Common-flexSpaceBetweenAlignEnd > h4{
+            color: #85AE54;
+            margin-left: 0.5em;
+        }
+
+        .MainQuestComponentStyle-iconMission {
+            width: 5em;
+        }
+
+        .TableMainQuestComponentStyle-colorLockedGradientTable {
+            background: linear-gradient(135deg, rgba(255, 51, 51, 0.25), transparent);
+            border-radius: 0px;
+        }
+
+        .TableMainQuestComponentStyle-rewardsContainerTable {
+            top: unset;
+            bottom: unset;
+            right: 0em;
+            justify-content: flex-end;
+        }
+
+        .TableMainQuestComponentStyle-rewardsContainerTable > .Common-flexCenterAlignCenterColumn {
+            background: rgb(85 89 100);
+            border-radius: 0px;
+            height: 8em;
+        }
+
+        .TableMainQuestComponentStyle-progressTableMission {
+            background: transparent;
+            border-radius: 0px;
+            position: absolute;
+            bottom: 0em;
+            filter: grayscale(0.35);
+        }
+
+        .BattlePauseMenuDialogComponentStyle-wrapper {
+            position: absolute;
+            transform: unset;
+            top: unset;
+        }
+
+        .BattlePauseMenuDialogComponentStyle-content,
+        .BattlePauseMenuComponentStyle-containerWrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .BattlePauseMenuDialogComponentStyle-timer {
+            background: rgb(255 255 255 / 10%);
+            border-radius: 0.15em;
+            position: absolute;
+            z-index: 15;
+            justify-content: center;
+            align-items: center;
+            top: 11.5em;
+            width: 30em;
+            height: 3.5em;
+        }
+
+        .BattlePauseMenuComponentStyle-container:nth-child(1) {
+            background: radial-gradient(100% 100% at 0% 0%, rgba(255, 204, 0, 0.75) 0%, rgba(255, 204, 0, 0) 100%), rgba(0, 25, 38, 0.75);
+            outline: 1px solid rgb(255 255 255 / 15%);
+            padding-top: 4.5em;
+            padding-bottom: 4.5em;
+            padding-left: 3.5em;
+            padding-right: 3.5em;
+            position: absolute;
+            bottom: -14em;
+            margin: unset;
+        }
+
+        .BattlePauseMenuComponentStyle-container:nth-child(1):before {
+            content: 'Меню паузы';
+            color: white;
+            font-family: 'RubikBold';
+            font-size: 1.5em;
+            text-transform: uppercase;
+            position: absolute;
+            left: 1em;
+            top: 0.85em;
+        }
+
+        .BattlePauseMenuComponentStyle-menuButton {
+            background: rgb(255 255 255 / 10%);
+            border: unset;
+            border-radius: 0.15em;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.25em;
+            height: 3em;
+        }
+
+        .BattlePauseMenuComponentStyle-selectedMenuRedButton {
+            background: #fd6456;
+            border: unset;
+            border-radius: 0.15em;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.25em;
+            height: 3em;
+        }
+
+        .BattlePauseMenuComponentStyle-redMenuButton span {
+            color: white;
+            text-shadow: 0 0 8px rgb(0 0 0 / 50%);
+        }
+
+        .BattlePauseMenuComponentStyle-itemsWrapper {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .BattlePauseMenuComponentStyle-classicButton {
+            font-size: 1.25em !important;
+            text-shadow: 0 0 8px rgb(0 0 0 / 50%);
+            position: absolute;
+        }
+
+        .BattlePauseMenuComponentStyle-timerContainer > span {
+            color: rgb(255 188 9) !important;
+        }
+
+        .BattleChatComponentStyle-inputContainerAllies,
+        .BattleChatComponentStyle-inputContainerAll {
+            background: rgb(45 49 64 / 75%) !important;
+            border: 1px solid rgb(255 255 255 / 50%);
+            border-radius: 0px;
+            height: 3.5em;
+        }
+
+        .BattleChatComponentStyle-container > .Common-flexStartAlignEnd > .Common-flexCenterAlignCenter {
+            background-color: rgb(45 49 64 / 75%) !important;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgElEQVR4nO2Zy2vUQBjAcxb1bxBvgohgZ1YXdd2ZrVuoLVYr9VHxBaVCQdGLvVbwIh69CYIoPg5e/AMEj+J/4AN8QNtt0WUeyRpJRrJV43a27GbyZZKFfjDXL7/fzDffZBLH2YyNY7lS2bo6grc7gxZiGO0VFL3hFIeCYsUpescIPuQMQrAqOiwo4hH4/4NT7EuCJpwiB6uVDgqK2Hr4gZBgPeALLcH6hC+kBEsIXygJZghfCAmWEj5XCQYEL/KQgIYXNiWyghc2JJLAe/PX1frwbl3LT4IlnHnv5lVd4MZsPivBDMrGnbusCbhzl+yXEzOseXdmWheYOWd3T7AUG9a9eEoXuDBpb2OzlN1Gnh3XBOSZcaNcIqkERKuUJ+u6wIm6cT7RrwRUn5djVV1g7EiqnKKXBB8e2t3tJmU06mVNQBw9kD4vXZOIJloXIPgVCPyfoYIgpg8CsLwikiD4bTcBASrguf/4Q9cFFRAUq5VyeVuHgCC4CfmAsPkjFmh+h16BQB3bt6VTgKKnoAKN5VigsQS7AgS91krIq5R2CIIbUA8Jvn2Jt8DXz4ACiHNS2rNRG93FKV4EEfj0IRb4+B6qdCQnuNrrLACRkFOjSk5PrI2pUTvwWayEtZmHlpCTI+rng/vKf/JQuVdO24VPKyGP11S4uhIfZL985c6etwufRqK1MK+9SvjPHtmHN5VoX2jCsEOgdfd2PvCmEq17d1S4tNg+kf3nj5Wo7c8P3lZ34lnCZy3BbcBnJcFtwkNL8DzgoSR4nvBpJQoBbypRKPikEoWE71ei0PB/I7otdb/ZIRb9BHcGITw6tFNQ/KL9oYDgJqf4ZbQ6eXNthpNB/AYeXF9CbPj24AAAAABJRU5ErkJggg==);
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid rgb(255 255 255 / 50%);
+            border-radius: 0px;
+            width: 3.5em;
+            height: 3.5em;
+        }
+
+        .BattleChatComponentStyle-container > .Common-flexStartAlignEnd > .Common-flexCenterAlignCenter > img {
+            visibility: hidden;
         }
 
         `
