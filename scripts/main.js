@@ -2013,15 +2013,16 @@
 
         .BattleTabStatisticComponentStyle-container > div > .Common-flexCenterAlignCenter {
             height: 1em;
-            visibility: hidden;
+            margin-top: unset;
         }
 
-        .BattleTabStatisticComponentStyle-container > div > .Common-flexCenterAlignCenter:before {
+        .BattleTabStatisticComponentStyle-containerInsideTeams:before {
             content: 'by Katana';
             position: absolute;
             visibility: visible;
             color: rgb(255 255 255 / 12.5%);
-            bottom: 0.3em;
+            bottom: 0.75em;
+            left: 1em;
         }
 
         .BattleTabStatisticComponentStyle-header {
@@ -3269,34 +3270,13 @@
 
     function DynamicCheck() {
 
-        const Arr = [ 'https://tankionline.com/play/',
-                      'https://public-deploy1.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy1.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy1.test-eu.tankionline.com/balancer',
-                      'https://public-deploy2.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy2.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy2.test-eu.tankionline.com/balancer',
-                      'https://public-deploy3.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy3.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy3.test-eu.tankionline.com/balancer',
-                      'https://public-deploy4.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy4.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy4.test-eu.tankionline.com/balancer',
-                      'https://public-deploy5.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy5.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy5.test-eu.tankionline.com/balancer',
-                      'https://public-deploy6.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy6.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy6.test-eu.tankionline.com/balancer',
-                      'https://public-deploy7.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy7.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy7.test-eu.tankionline.com/balancer',
-                      'https://public-deploy8.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy8.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy8.test-eu.tankionline.com/balancer',
-                      'https://public-deploy9.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy9.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy9.test-eu.tankionline.com/balancer' ];
+        StyleSheet();
+        TankiLogo();
+        ApplicationLoader();
+        LobbyLoader();
+        LobbyClosing();
 
-        const isArrayAvailable = Arr.includes(window.location.href) || Arr.includes(window.location.origin);
-
-        if (isArrayAvailable == true) {
-
-            StyleSheet();
-            TankiLogo();
-            ApplicationLoader();
-            LobbyLoader();
-            LobbyClosing();
-
-            console.log(`> HTML 2021 Theme launched successfully.\n`, document);
-
-        } else {
-
-            console.log(`> HTML 2021 Theme is not available.`);
-
-        };
+        console.log(`> HTML 2021 Theme launched successfully.\n`, document);
 
         function BattlesArray() {
 
