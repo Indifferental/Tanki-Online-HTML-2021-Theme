@@ -19,7 +19,7 @@
                 if (MainHeader) {
 
                         const MainListOfComponents = document.createElement('div');
-                                  MainListOfComponents.className = 'ApplicationAnimation-header'
+                              MainListOfComponents.className = 'ApplicationAnimation-header'
 
                         MainHeader.appendChild(MainListOfComponents);
 
@@ -34,7 +34,7 @@
                 if (MainHeader) {
 
                         const MainListOfComponents = document.createElement('div');
-                                  MainListOfComponents.className = 'LoadingAnimation-header'
+                              MainListOfComponents.className = 'LoadingAnimation-header'
 
                         MainHeader.appendChild(MainListOfComponents);
 
@@ -61,8 +61,8 @@
                 if (MainHeader) {
 
                         const LoadingSpan = document.createElement('span');
-                                  LoadingSpan.innerHTML = 'Loading'
-                                  LoadingSpan.className = 'ApplicationLoaderComponentStyle-loadingSpan'
+                              LoadingSpan.innerHTML = 'Loading'
+                              LoadingSpan.className = 'ApplicationLoaderComponentStyle-loadingSpan'
 
                         MainHeader.appendChild(LoadingSpan);
 
@@ -79,14 +79,14 @@
                 if (MainHeader && LobbyLoader) {
 
                         const MainComponent = document.createElement('div');
-                                  MainComponent.className = 'LobbyLoaderComponentStyle-closingList_1'
-                                  MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 110ms linear forwards'
+                              MainComponent.className = 'LobbyLoaderComponentStyle-closingList_1'
+                              MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 110ms linear forwards'
 
                         document.body.appendChild(MainComponent);
 
                         const SecondComponent = document.createElement('div');
-                                  SecondComponent.className = 'LobbyLoaderComponentStyle-closingList_2'
-                                  SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332'
+                              SecondComponent.className = 'LobbyLoaderComponentStyle-closingList_2'
+                              SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332'
 
                         document.body.appendChild(SecondComponent);
 
@@ -116,27 +116,27 @@
                 if (MainHeader && LobbyLoader) {
 
                         const MainComponent = document.createElement('div');
-                                  MainComponent.className = 'LobbyLoaderComponentStyle-closingList_1'
-                                  MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 110ms linear forwards'
+                              MainComponent.className = 'LobbyLoaderComponentStyle-closingList_1'
+                              MainComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9999; background: #243248; animation: disappear 110ms linear forwards'
 
                         document.body.appendChild(MainComponent);
 
                         const SecondComponent = document.createElement('div');
-                                  SecondComponent.className = 'LobbyLoaderComponentStyle-closingList_2'
-                                  SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332'
+                              SecondComponent.className = 'LobbyLoaderComponentStyle-closingList_2'
+                              SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332'
 
                         document.body.appendChild(SecondComponent);
 
                         setTimeout(function() {
 
-                                  SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332; animation: disappear 110ms linear forwards'
+                              SecondComponent.style = 'width: 100%; height: 100%; position: absolute; z-index: 9998; background: #192332; animation: disappear 110ms linear forwards'
 
                         }, 200);
 
                         setTimeout(function() {
 
-                                document.body.removeChild(MainComponent);
-                                document.body.removeChild(SecondComponent);
+                              document.body.removeChild(MainComponent);
+                              document.body.removeChild(SecondComponent);
 
                         }, 600);
 
@@ -247,7 +247,7 @@
                 }
 
                 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-                        content: 'v1.031 // if you found a bug, write: https://vk.com/legionlegionlegionlegionlegion';
+                        content: 'v1.032 // if you found a bug, write: https://vk.com/legionlegionlegionlegionlegion';
                         color: white;
                         font-family: RubikRegular;
                         position: absolute;
@@ -3034,133 +3034,20 @@
 
                 `
 
-                var tankResistances = [{
-
-                          oldPicture: "https://tankionline.com/play/static/images/crit_resistance.7fb68893.svg",
-                          picture: "https://tankionline.com/play/static/images/resistances/crit_resistance.3f4d1cc2.svg"
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/firebird_resistance.785a9d6b.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/firebird_resistance.00ac2221.svg'
-
-                  }, {
-                          oldPicture: 'https://tankionline.com/play/static/images/freeze_resistance.33bdf642.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/freeze_resistance.d26eb338.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/isis_resistance.30a69ffc.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/isis_resistance.5b05887a.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/tesla_resistance.3e686c8e.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/tesla_resistance.663d3597.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/hammer_resistance.6c549d29.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/hammer_resistance.28e73097.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/twins_resistance.ad189f61.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/twins_resistance.fbbc4d72.svg'
-
-                  }, {
-                          oldPicture: 'https://tankionline.com/play/static/images/ricochet_resistance.8247beaa.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/ricochet_resistance.69c6c7ee.svg'
-
-                  }, {
-                          oldPicture: 'https://tankionline.com/play/static/images/smoky_resistance.845afc14.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/smoky_resistance.c4c202ca.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/rocket_launcher_resistance.b7dfd64f.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/rocket_launcher_resistance.5772cbaa.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/vulcan_resistance.824f6f0e.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/vulcan_resistance.9aebf267.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/thunder_resistance.6d7f4531.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/thunder_resistance.9dab2abf.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/scorpio_resistance.e8f1787f.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/scorpio_resistance.d40f8fbb.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/railgun_resistance.636a554f.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/railgun_resistance.7577c7a1.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/artillery_resistance.9b4cbc34.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/artillery_resistance.bd49fc96.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/gauss_resistance.bb8f409c.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/gauss_resistance.acf358ed.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/shaft_resistance.0778fd3e.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/shaft_resistance.7e58bc19.svg'
-
-                  }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/mine_resistance.dd581c90.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/mine_resistance.0d0d3c98.svg'
-
-                  }];
-
-                new MutationObserver((mutations) => { mutations.forEach(({ addedNodes, target }) => { if (addedNodes.length && ('tbody' === target.localName || target.className.includes('BattleComponentStyle-canvasContainer'))) {
-
-                        const user = document.querySelector('.UserInfoContainerStyle-textDecoration')?.textContent?.split(' ').pop();
-
-                        target.querySelectorAll('.Common-maskImage').forEach((element) => {
-
-                                const maskImage = window.getComputedStyle(element).getPropertyValue('-webkit-mask-image')?.split('"')?.[1]; const resistance = tankResistances.find(({ oldPicture }) => maskImage === oldPicture);
-
-                                if (resistance) {
-
-                                  element.style.cssText = `
-
-                                        -webkit-mask-image: none;
-                                        background: url(${resistance.picture}) center center / 1em 1em no-repeat;
-                                        width: 1em;
-                                        height: 1em;
-
-                                  `
-                                };
-
-                        });
-
-                } }) }).observe(document, { childList: true, subtree: true });
-
                 function MainLayerFunction(css) {
 
                         const body = document.body || document.getElementsByTagName('body')[0];
 
                         const style = document.createElement('style');
-                                  style.className = 'HTML 2021 Theme'
+                              style.className = 'HTML 2021 Theme'
 
                         if (style.styleSheet) {
 
-                                style.styleSheet.cssText = css
+                              style.styleSheet.cssText = css
 
                         } else {
 
-                                style.appendChild(document.createTextNode(css));
+                              style.appendChild(document.createTextNode(css));
 
                         };
 
@@ -3184,7 +3071,7 @@
 
                                 if (battleMenu) {
 
-                                        battleMenu.forEach((item) => item.style = 'visibility: visible' );
+                                    battleMenu.forEach((item) => item.style = 'visibility: visible' );
 
                                 };
 
@@ -3192,7 +3079,7 @@
 
                                 if (tableRows) {
 
-                                        tableRows.style = 'visibility: hidden'
+                                    tableRows.style = 'visibility: hidden'
 
                                 };
 
@@ -3200,7 +3087,7 @@
 
                                 if (createBattle) {
 
-                                        createBattle.style = 'visibility: hidden'
+                                    createBattle.style = 'visibility: hidden'
 
                                 };
 
@@ -3208,7 +3095,7 @@
 
                                 if (navBlock) {
 
-                                        navBlock.style = 'visibility: hidden'
+                                    navBlock.style = 'visibility: hidden'
 
                                 };
 
@@ -3216,7 +3103,7 @@
 
                                 if (filterButton) {
 
-                                        filterButton.style = 'visibility: hidden'
+                                    filterButton.style = 'visibility: hidden'
 
                                 };
 
@@ -3280,7 +3167,7 @@
 
                 };
 
-                let Observer = new MutationObserver(function(Inspect) { Inspect.forEach(function(Mutation) { if (Mutation.addedNodes.length && Mutation.type === 'childList') { Mutation.addedNodes.forEach(function(Check) {
+                let Observer = new MutationObserver(function(targets) { targets.forEach(function(Mutation) { if (Mutation.addedNodes.length && Mutation.type === 'childList') { Mutation.addedNodes.forEach(function(Check) {
 
                 if (Check.nodeType === 1) {
 
@@ -3389,7 +3276,7 @@
 
                 function Observe() {
 
-                        let Observer = new MutationObserver(function(Inspect) { Inspect.forEach(function(Mutation) { if (Mutation.addedNodes.length && Mutation.type == 'childList') { Mutation.addedNodes.forEach(function(Check) {
+                        let Observer = new MutationObserver(function(targets) { targets.forEach(function(Mutation) { if (Mutation.addedNodes.length && Mutation.type == 'childList') { Mutation.addedNodes.forEach(function(Check) {
 
                         if (Check.nodeType == 1 && Check.classList.contains('Common-container')) {
 
@@ -3400,7 +3287,7 @@
 
                                 if (h3) {
 
-                                        h3.innerHTML = '[ Z ]'
+                                      h3.innerHTML = '[ Z ]'
 
                                 };
 
@@ -3413,7 +3300,7 @@
                                         if (countHeader) {
 
                                                 const battleCount = document.createElement('div');
-                                                          battleCount.className = 'ProBattlesComponentStyle-battleCurrentAmount'
+                                                      battleCount.className = 'ProBattlesComponentStyle-battleCurrentAmount'
 
                                                 countHeader.appendChild(battleCount);
 
@@ -3423,7 +3310,7 @@
 
                         };
 
-                        if (Check.nodeType === 1 && Check.classList.contains('ApplicationLoaderComponentStyle-container') && Check.classList.contains('Common-flexCenterAlignCenterColumn')) { // application loader animation + span
+                        if (Check.nodeType === 1 && Check.classList.contains('ApplicationLoaderComponentStyle-container') && Check.classList.contains('Common-flexCenterAlignCenterColumn')) {
 
                                 ApplicationLoader();
                                 ReplaceLogo();
@@ -3431,7 +3318,7 @@
 
                         };
 
-                        if (Check.nodeType === 1 && Check.classList.contains('LobbyLoaderComponentStyle-container')) { // lobby loader animation
+                        if (Check.nodeType === 1 && Check.classList.contains('LobbyLoaderComponentStyle-container')) {
 
                                 LobbyLoader();
 
@@ -3444,6 +3331,120 @@
                 };
 
                 Observe();
+
+                var tankResistances = [{
+
+                          oldPicture: "https://tankionline.com/play/static/images/crit_resistance.7fb68893.svg",
+                          picture: "https://tankionline.com/play/static/images/resistances/crit_resistance.3f4d1cc2.svg"
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/firebird_resistance.785a9d6b.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/firebird_resistance.00ac2221.svg'
+
+                  }, {
+                          oldPicture: 'https://tankionline.com/play/static/images/freeze_resistance.33bdf642.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/freeze_resistance.d26eb338.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/isis_resistance.30a69ffc.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/isis_resistance.5b05887a.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/tesla_resistance.3e686c8e.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/tesla_resistance.663d3597.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/hammer_resistance.6c549d29.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/hammer_resistance.28e73097.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/twins_resistance.ad189f61.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/twins_resistance.fbbc4d72.svg'
+
+                  }, {
+                          oldPicture: 'https://tankionline.com/play/static/images/ricochet_resistance.8247beaa.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/ricochet_resistance.69c6c7ee.svg'
+
+                  }, {
+                          oldPicture: 'https://tankionline.com/play/static/images/smoky_resistance.845afc14.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/smoky_resistance.c4c202ca.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/rocket_launcher_resistance.b7dfd64f.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/rocket_launcher_resistance.5772cbaa.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/vulcan_resistance.824f6f0e.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/vulcan_resistance.9aebf267.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/thunder_resistance.6d7f4531.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/thunder_resistance.9dab2abf.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/scorpio_resistance.e8f1787f.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/scorpio_resistance.d40f8fbb.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/railgun_resistance.636a554f.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/railgun_resistance.7577c7a1.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/artillery_resistance.9b4cbc34.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/artillery_resistance.bd49fc96.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/gauss_resistance.bb8f409c.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/gauss_resistance.acf358ed.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/shaft_resistance.0778fd3e.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/shaft_resistance.7e58bc19.svg'
+
+                  }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/mine_resistance.dd581c90.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/mine_resistance.0d0d3c98.svg'
+
+                  }];
+
+                new MutationObserver((mutations) => { mutations.forEach(({ addedNodes, target }) => { if (addedNodes.length && ('tbody' === target.localName || target.className.includes('BattleComponentStyle-canvasContainer'))) {
+
+                        const user = document.querySelector('.UserInfoContainerStyle-textDecoration')?.textContent?.split(' ').pop();
+
+                        target.querySelectorAll('.Common-maskImage').forEach((element) => {
+
+                                const maskImage = window.getComputedStyle(element).getPropertyValue('-webkit-mask-image')?.split('"')?.[1]; const resistance = tankResistances.find(({ oldPicture }) => maskImage === oldPicture);
+
+                                if (resistance) {
+
+                                        element.style.cssText = `
+
+                                                -webkit-mask-image: none;
+                                                background: url(${resistance.picture}) center center / 1em 1em no-repeat;
+                                                width: 1em;
+                                                height: 1em;
+
+                                        `
+
+                                };
+
+                        });
+
+                }})}).observe(document, { subtree: true, childList: true });
 
         };
 
