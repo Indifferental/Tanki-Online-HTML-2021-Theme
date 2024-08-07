@@ -86,6 +86,35 @@
 
         };
 
+        function HotkeySpan() {
+
+            const h3 = document.querySelector('.BreadcrumbsComponentStyle-backButton h3');
+
+            if (h3) {
+
+                  h3.innerHTML = '[ Z ]'
+
+            };
+
+            const MainHeader = document.querySelector('.ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon');
+
+            const countHeader = document.getElementsByClassName('ProBattlesComponentStyle-navigationBlock')[0];
+
+            if (MainHeader) {
+
+                    if (countHeader) {
+
+                            const battleCount = document.createElement('div');
+                                  battleCount.className = 'ProBattlesComponentStyle-battleCurrentAmount'
+
+                            countHeader.appendChild(battleCount);
+
+                    };
+
+            };
+
+        };
+
         function ApplicationLoader() {
 
                 let MainHeader = document.getElementsByClassName('ApplicationLoaderComponentStyle-container')[0];
@@ -247,7 +276,7 @@
                 }
 
                 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-                        content: 'v1.032 // if you found a bug, write: https://vk.com/legionlegionlegionlegionlegion';
+                        content: 'v1.033 // if you found a bug, write: https://vk.com/legionlegionlegionlegionlegion';
                         color: white;
                         font-family: RubikRegular;
                         position: absolute;
@@ -3032,6 +3061,15 @@
                         visibility: hidden;
                 }
 
+                .BattleCreateComponentStyle-mainContainer > .Common-alignSelfCenter {
+                        left: 0em;
+                        width: 76%;
+                }
+
+                .BattleCreateComponentStyle-mainContainer.ProBattlesComponentStyle-mainContainer.Common-flexStartAlignStart > .ProBattlesComponentStyle-rightPanel.Common-flexSpaceBetween > div > .MainSectionComponentStyle-informationBlock > div > div > .BattleCardComponentStyle-enableIconSettings {
+                        top: unset;
+                }
+
                 `
 
                 function MainLayerFunction(css) {
@@ -3057,7 +3095,124 @@
 
                 MainLayerFunction(css);
 
+                var tankResistances = [{
+
+                          oldPicture: "https://tankionline.com/play/static/images/crit_resistance.7fb68893.svg",
+                          picture: "https://tankionline.com/play/static/images/resistances/crit_resistance.3f4d1cc2.svg"
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/firebird_resistance.785a9d6b.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/firebird_resistance.00ac2221.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/freeze_resistance.33bdf642.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/freeze_resistance.d26eb338.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/isis_resistance.30a69ffc.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/isis_resistance.5b05887a.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/tesla_resistance.3e686c8e.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/tesla_resistance.663d3597.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/hammer_resistance.6c549d29.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/hammer_resistance.28e73097.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/twins_resistance.ad189f61.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/twins_resistance.fbbc4d72.svg'
+
+                }, {
+                          oldPicture: 'https://tankionline.com/play/static/images/ricochet_resistance.8247beaa.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/ricochet_resistance.69c6c7ee.svg'
+
+                }, {
+                          oldPicture: 'https://tankionline.com/play/static/images/smoky_resistance.845afc14.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/smoky_resistance.c4c202ca.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/rocket_launcher_resistance.b7dfd64f.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/rocket_launcher_resistance.5772cbaa.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/vulcan_resistance.824f6f0e.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/vulcan_resistance.9aebf267.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/thunder_resistance.6d7f4531.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/thunder_resistance.9dab2abf.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/scorpio_resistance.e8f1787f.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/scorpio_resistance.d40f8fbb.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/railgun_resistance.636a554f.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/railgun_resistance.7577c7a1.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/artillery_resistance.9b4cbc34.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/artillery_resistance.bd49fc96.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/gauss_resistance.bb8f409c.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/gauss_resistance.acf358ed.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/shaft_resistance.0778fd3e.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/shaft_resistance.7e58bc19.svg'
+
+                }, {
+
+                          oldPicture: 'https://tankionline.com/play/static/images/mine_resistance.dd581c90.svg',
+                          picture: 'https://tankionline.com/play/static/images/resistances/mine_resistance.0d0d3c98.svg'
+
+                }];
+
+                new MutationObserver((mutations) => { mutations.forEach(({ addedNodes, target }) => { if (addedNodes.length && ('tbody' === target.localName || target.className.includes('BattleComponentStyle-canvasContainer'))) {
+
+                        const user = document.querySelector('.UserInfoContainerStyle-textDecoration')?.textContent?.split(' ').pop();
+
+                        target.querySelectorAll('.Common-maskImage').forEach((element) => {
+
+                                const maskImage = window.getComputedStyle(element).getPropertyValue('-webkit-mask-image')?.split('"')?.[1]; const resistance = tankResistances.find(({ oldPicture }) => maskImage === oldPicture);
+
+                                if (resistance) {
+
+                                        element.style.cssText = `
+
+                                                -webkit-mask-image: none;
+                                                background: url(${resistance.picture}) center center / 1em 1em no-repeat;
+                                                width: 1em;
+                                                height: 1em;
+
+                                        `
+
+                                };
+
+                        });
+
+                }})}).observe(document, { subtree: true, childList: true });
+
         };
+
+        StyleSheet();
 
         function BattlesArray() {
 
@@ -3258,9 +3413,6 @@
         function DynamicCheck() {
 
                 TankiIcon();
-                StyleSheet();
-
-                console.log(`> HTML 2021 Theme launched successfully.\n`, document);
 
                 if (window.screen.width >= 2560) {
 
@@ -3282,31 +3434,7 @@
 
                                 GarageAnimation();
                                 MiscAnimation();
-
-                                const h3 = document.querySelector('.BreadcrumbsComponentStyle-backButton h3');
-
-                                if (h3) {
-
-                                      h3.innerHTML = '[ Z ]'
-
-                                };
-
-                                const MainHeader = document.querySelector('.ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon');
-
-                                const countHeader = document.getElementsByClassName('ProBattlesComponentStyle-navigationBlock')[0];
-
-                                if (MainHeader) {
-
-                                        if (countHeader) {
-
-                                                const battleCount = document.createElement('div');
-                                                      battleCount.className = 'ProBattlesComponentStyle-battleCurrentAmount'
-
-                                                countHeader.appendChild(battleCount);
-
-                                        };
-
-                                };
+                                HotkeySpan();
 
                         };
 
@@ -3332,119 +3460,7 @@
 
                 Observe();
 
-                var tankResistances = [{
-
-                          oldPicture: "https://tankionline.com/play/static/images/crit_resistance.7fb68893.svg",
-                          picture: "https://tankionline.com/play/static/images/resistances/crit_resistance.3f4d1cc2.svg"
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/firebird_resistance.785a9d6b.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/firebird_resistance.00ac2221.svg'
-
-                    }, {
-                          oldPicture: 'https://tankionline.com/play/static/images/freeze_resistance.33bdf642.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/freeze_resistance.d26eb338.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/isis_resistance.30a69ffc.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/isis_resistance.5b05887a.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/tesla_resistance.3e686c8e.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/tesla_resistance.663d3597.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/hammer_resistance.6c549d29.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/hammer_resistance.28e73097.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/twins_resistance.ad189f61.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/twins_resistance.fbbc4d72.svg'
-
-                    }, {
-                          oldPicture: 'https://tankionline.com/play/static/images/ricochet_resistance.8247beaa.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/ricochet_resistance.69c6c7ee.svg'
-
-                    }, {
-                          oldPicture: 'https://tankionline.com/play/static/images/smoky_resistance.845afc14.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/smoky_resistance.c4c202ca.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/rocket_launcher_resistance.b7dfd64f.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/rocket_launcher_resistance.5772cbaa.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/vulcan_resistance.824f6f0e.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/vulcan_resistance.9aebf267.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/thunder_resistance.6d7f4531.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/thunder_resistance.9dab2abf.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/scorpio_resistance.e8f1787f.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/scorpio_resistance.d40f8fbb.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/railgun_resistance.636a554f.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/railgun_resistance.7577c7a1.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/artillery_resistance.9b4cbc34.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/artillery_resistance.bd49fc96.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/gauss_resistance.bb8f409c.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/gauss_resistance.acf358ed.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/shaft_resistance.0778fd3e.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/shaft_resistance.7e58bc19.svg'
-
-                    }, {
-
-                          oldPicture: 'https://tankionline.com/play/static/images/mine_resistance.dd581c90.svg',
-                          picture: 'https://tankionline.com/play/static/images/resistances/mine_resistance.0d0d3c98.svg'
-
-                }];
-
-                new MutationObserver((mutations) => { mutations.forEach(({ addedNodes, target }) => { if (addedNodes.length && ('tbody' === target.localName || target.className.includes('BattleComponentStyle-canvasContainer'))) {
-
-                        const user = document.querySelector('.UserInfoContainerStyle-textDecoration')?.textContent?.split(' ').pop();
-
-                        target.querySelectorAll('.Common-maskImage').forEach((element) => {
-
-                                const maskImage = window.getComputedStyle(element).getPropertyValue('-webkit-mask-image')?.split('"')?.[1]; const resistance = tankResistances.find(({ oldPicture }) => maskImage === oldPicture);
-
-                                if (resistance) {
-
-                                        element.style.cssText = `
-
-                                                -webkit-mask-image: none;
-                                                background: url(${resistance.picture}) center center / 1em 1em no-repeat;
-                                                width: 1em;
-                                                height: 1em;
-
-                                        `
-
-                                };
-
-                        });
-
-                }})}).observe(document, { subtree: true, childList: true });
+                console.log(`> HTML 2021 Theme launched successfully.\n`, document);
 
         };
 
