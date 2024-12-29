@@ -276,7 +276,7 @@
                 }
 
                 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-                        content: 'v1.033 // if you found a bug, write: https://vk.com/legionlegionlegionlegionlegion';
+                        content: 'v1.034 // if you found a bug, write: https://vk.com/legionlegionlegionlegionlegion';
                         color: white;
                         font-family: 'BaseFontRegular';
                         position: absolute;
