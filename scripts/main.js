@@ -1978,7 +1978,7 @@
                 }
 
                 .BattleTabStatisticComponentStyle-containerInsideTeams:before {
-                        content: 'by Katana';
+                        content: 'by Indifferental';
                         position: absolute;
                         visibility: visible;
                         color: rgb(255 255 255 / 12.5%);
