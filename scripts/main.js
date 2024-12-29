@@ -3271,6 +3271,142 @@
 
         };
 
+        function ArrayCheck() {
+
+                var count = 0
+
+                var returnEvent = () => {
+
+                        let battleMenu = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
+
+                        if (battleMenu) {
+
+                                battleMenu.forEach((item) => item.style = 'visibility: hidden' );
+
+                        };
+
+                        let tableRows = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
+
+                        if (tableRows) {
+
+                                tableRows.style = 'visibility: visible'
+
+                        };
+
+                        let createBattle = document.querySelector('.ProBattlesComponentStyle-createBattleButton');
+
+                        if (createBattle) {
+
+                                createBattle.style = 'visibility: visible'
+
+                        };
+
+                        let navBlock = document.querySelector('.Common-container > .ProBattlesComponentStyle-navigationBlock');
+
+                        if (navBlock) {
+
+                                navBlock.style = 'visibility: visible'
+
+                        };
+
+                        let filterButton = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1)');
+
+                        if (filterButton) {
+
+                                filterButton.style = 'visibility: visible'
+
+                        };
+
+                };
+
+                let Observer = new MutationObserver(function(targets) { targets.forEach(function(Mutation) { if (Mutation.addedNodes.length && Mutation.type === 'childList') { Mutation.addedNodes.forEach(function(Check) {
+
+                if (Check.nodeType === 1) {
+
+                        let battleMenu = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn');
+
+                        let selectBattle = document.querySelector('.BattleInfoComponentStyle-selectBattle');
+
+                        let tableRows = document.querySelectorAll('.ProBattlesComponentStyle-mainContainer > .Common-scrollBarVisible');
+
+                        let createBattle = document.querySelector('.ProBattlesComponentStyle-createBattleButton');
+
+                        let navBlock = document.querySelector('.ProBattlesComponentStyle-navigationBlock');
+
+                        let filterButton = document.querySelector('.ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > div > .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:nth-child(1)');
+
+                        if (battleMenu && !selectBattle) {
+
+                                let style = window.getComputedStyle(battleMenu, null);
+
+                                if (style.visibility == 'visible') {
+
+                                        tableRows.forEach((item) => item.style = 'visibility: hidden !important' );
+
+                                        createBattle.style = 'visibility: hidden'
+
+                                        navBlock.style = 'visibility: hidden'
+
+                                        filterButton.style = 'visibility: hidden'
+
+                                };
+
+                        };
+
+                        let header = document.getElementsByClassName('ProBattlesComponentStyle-mainContainer')[0];
+
+                        let returnButton = document.getElementsByClassName('BattleCardComponentStyle-line')[0];
+
+                        if (header) {
+
+                                let returnButton = document.getElementsByClassName('BattleCardComponentStyle-line')[0];
+
+                                if (returnButton) {
+
+                                        returnButton.addEventListener('click', returnEvent);
+
+                                };
+
+                        };
+
+                        let MainHeader = document.querySelector('.ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon');
+
+                        if (MainHeader) {
+
+                                BattlesArray();
+
+                                count++
+
+                                let battleCount = document.getElementsByClassName('ProBattlesComponentStyle-battleCurrentAmount')[0];
+
+                                if (battleCount) {
+
+                                        battleCount.innerHTML = `${count} of ${MainHeader.toLocaleString()} with available: ${document.querySelectorAll('.ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon').length.toLocaleString()}`
+
+                                };
+
+                                if (count > 1000) {
+
+                                        battleCount.innerHTML = `чем ты занимаешься долбоёб`
+
+                                };
+
+                        } else {
+
+                                count = 0
+
+                        };
+
+                };
+
+                }); }}); });
+
+                let Configuration = { subtree: true, childList: true }; Observer.observe(document.body, Configuration);
+
+        };
+
+        ArrayCheck();
+
         function DynamicCheck() {
 
                 TankiIcon();
