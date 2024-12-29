@@ -605,6 +605,10 @@
                         right: 1.5em;
                 }
 
+                .UserScoreComponentStyle-addRubyCrystal {
+                        visibility: hidden;
+                }
+
                 .UserScoreComponentStyle-blockRightPanel > .Common-flexCenterAlignCenter,
                 .UserScoreComponentStyle-blockRightPanel > .BreadcrumbsComponentStyle-logout,
                 .BreadcrumbsComponentStyle-rightButtonsContainer > .Common-flexCenterAlignCenter,
@@ -750,7 +754,7 @@
                         top: 0em;
                         left: 1.25em;
                         color: rgba(255, 255, 255, 0.6);
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                 }
 
                 .ChallengeTimerComponentStyle-textTime:before {
@@ -771,7 +775,7 @@
                         top: 0.25em;
                         left: 1.75em;
                         color: rgba(255, 255, 255, 0.6);
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         display: flex;
                         align-items: center;
                 }
@@ -865,7 +869,7 @@
                 }
 
                 .BreadcrumbsComponentStyle-backButton h3 {
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         color: white;
                         background: transparent;
                         font-size: 1.3em;
@@ -1294,7 +1298,7 @@
                 .SuppliesComponentStyle-cellAdd span {
                         margin-bottom: unset;
                         margin-top: 1.25em;
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         pointer-events: none;
                 }
 
@@ -1460,7 +1464,7 @@
 
                 .GarageItemComponentStyle-descriptionDevice > div > .Font-bold {
                         color: rgba(191, 213, 255, 0.6);
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         font-size: 1em;
                         text-transform: unset;
                 }
@@ -1473,7 +1477,6 @@
                 }
 
                 .MountedItemsStyle-itemPreview {
-                        width: 10em;
                         position: absolute;
                 }
 
@@ -2515,7 +2518,7 @@
                 }
 
                 .ProBattlesComponentStyle-battlesContainer > .ProBattlesComponentStyle-table > .TableComponentStyle-tBody > tr.Common-flexWrapNowrap.modeLimitIcon > .ProBattlesComponentStyle-cellName > .Common-flexStartAlignCenter > div > span {
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         color: white;
                 }
 
@@ -2543,7 +2546,7 @@
                         content: 'BACK';
                         color: white;
                         font-size: 1.5em;
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         pointer-events: none;
                         display: flex;
                         justify-content: center;
@@ -2588,7 +2591,7 @@
 
                 .UsersTableStyle-rowBattleEmpty > .UsersTableStyle-emptyRow > span {
                         color: white;
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         text-transform: unset;
                         margin-left: unset;
                         margin-right: 10.35em;
@@ -2628,7 +2631,7 @@
 
                 .BattleCardComponentStyle-crystalFund:before {
                         content: 'Fund:';
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         color: rgb(255 255 255 / 40%);
                         position: absolute;
                         bottom: 1.35em;
@@ -2641,7 +2644,7 @@
 
                 .BattleCardComponentStyle-enableIconSettings:before {
                         content: 'Battle settings:';
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         color: rgb(255 255 255 / 40%);
                         position: absolute;
                         bottom: 1.35em;
@@ -2655,7 +2658,7 @@
 
                 .BattleInfoComponentStyle-blockCard > .Common-backgroundImageCover > .Common-flexSpaceBetweenAlignStretch:before {
                         content: 'Ranks:';
-                        font-family: ''BaseFontRegular'';
+                        font-family: 'BaseFontRegular';
                         color: rgb(255 255 255 / 40%);
                         position: absolute;
                         left: 0.225em;
