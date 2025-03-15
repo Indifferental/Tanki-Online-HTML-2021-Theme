@@ -276,7 +276,7 @@
                 }
 
                 .ApplicationLoaderComponentStyle-container.Common-flexCenterAlignCenterColumn > .Common-flexCenterAlignCenter:before {
-                        content: 'v1.034 // if you found a bug, write: https://vk.com/legionlegionlegionlegionlegion';
+                        content: 'v1.04 // if you found a bug, write: discord @drawingwithblood';
                         color: white;
                         font-family: 'BaseFontRegular';
                         position: absolute;
@@ -2557,7 +2557,7 @@
                 }
 
                 .ProBattlesComponentStyle-mainContainer > .Common-flexStartAlignCenterColumn > .SettingsComponentStyle-scrollCreateBattle {
-                        margin-left: 36.5em;
+                        margin-left: 36.1em;
                         top: 6.3em;
                         position: absolute;
                         width: 36em;
@@ -2565,23 +2565,22 @@
                 }
 
                 .UsersTableStyle-containerBattleListCommands,
-                .UsersTableStyle-containerBattleListCommands > .UsersTableStyle-scrollCommandTable,
-                .UsersTableStyle-containerBattleListCommands > .UsersTableStyle-scrollCommandTable > .Common-flexStartAlignStartColumn {
+                .UsersTableStyle-containerBattleListCommands > .UsersTableStyle-scrollCommandTable {
                         width: inherit !important;
                 }
 
-                .Common-flexStartAlignStartColumn > .UsersTableStyle-row {
+                .UsersTableStyle-scrollCommandTable > .UsersTableStyle-row {
                         width: calc(100% - 0.5em);
                         border-radius: 0px;
                 }
 
-                .Common-flexStartAlignStartColumn > .UsersTableStyle-row > .UsersTableStyle-centerCell {
+                .UsersTableStyle-scrollCommandTable > .UsersTableStyle-row > .UsersTableStyle-centerCell {
                         width: 17.35em !important;
                         margin-top: 0.1em;
                         border-radius: 0px;
                 }
 
-                .Common-flexStartAlignStartColumn > .UsersTableStyle-row > .UsersTableStyle-centerCell > .UsersTableStyle-commonContainer > div > div > .Common-flexStartAlignCenter {
+                .UsersTableStyle-scrollCommandTable > .UsersTableStyle-row > .UsersTableStyle-centerCell > .UsersTableStyle-commonContainer > div > div > .Common-flexStartAlignCenter {
                         max-width: 11.625em;
                 }
 
